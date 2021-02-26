@@ -1,73 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 //#include<stdio.h>
-//#include<math.h>
 //
 //int main()
 //{
-//	double a = 0;
-//	double b = 0;
-//	double c = 0;
-//	scanf("%lf%lf%lf",&a,&b,&c);
-//	if (a == 0.0&&b == 0.0)
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	scanf("%d%d%d", &a, &b, &c);
+//	if (a + b > c&&a + c > b&&b + c > a)
 //	{
-//		if (c == 0.0)
-//		{
-//			printf("Zero Equation\n");
-//			return 0;
-//		}
-//		else
-//		{
-//			printf("Not An Equation\n");
-//			return 0;
-//		}
-//	}
-//	if (a == 0.0)
-//	{
-//		printf("%.2lf\n", -1 * c / b);
-//		return 0;
-//	}
-//	double dt = b*b-4*a*c;
-//	if (dt == 0)
-//	{
-//		printf("%.2lf\n", -1 * b / (2 * a));
-//	}
-//	else if (dt > 0.0)
-//	{
-//		if (a > 0.0)
-//		{
-//			printf("%.2lf\n%.2lf\n", ((-1 * b) + sqrt(dt)) / (2 * a), ((-1 * b) - sqrt(dt)) / (2 * a));
-//		}
-//		else
-//		{
-//			printf("%.2lf\n%.2lf\n", ((-1 * b) - sqrt(dt)) / (2 * a), ((-1 * b) + sqrt(dt)) / (2 * a));
-//		}
+//		double s = (a + b + c) / 2.0;
+//		double area = sqrt(s*(s - a)*(s - b)*(s - c));
+//		double peri = a + b + c;
+//		printf("area = %.2lf; perimeter = %.2lf\n",area,peri);
 //	}
 //	else
 //	{
-//		double rea = -1 * b / (2 * a);
-//		double ima = sqrt(-1 * dt) / (2 * a);
-//		if (b == 0.0)
-//		{
-//			if (a > 0.0)
-//			{
-//				printf("%.2lfi\n%.2lfi\n", ima, ima);
-//				return 0;
-//			}
-//			else
-//			{
-//				printf("%.2lfi\n%.2lfi\n", -1 * ima,  * ima);
-//				return 0;
-//			}
-//		}
-//		if (a > 0.0)
-//		{
-//			printf("%.2lf+%.2lfi\n%.2lf%.2lfi\n", rea, ima, rea, ima);
-//		}
-//		else if (a < 0.0)
-//		{
-//			printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", rea, -1 * ima, rea, -1 * ima);
-//		}
+//		printf("These sides do not correspond to a valid triangle\n");
 //	}
 //	return 0;
 //}
@@ -76,7 +26,75 @@
 //
 //int main()
 //{
-//	printf("%.2lf", -1*0.0);
+//	int speed = 0;
+//	int limt = 0;
+//	scanf("%d%d", &speed, &limt);
+//	double percentage = 100.0*(speed-limt)/limt;
+//	if (speed >= (limt + limt * 0.1)&&speed<(limt+limt*0.5))
+//	{
+//		printf("Exceed %.0lf%%. Ticket 200\n", percentage);
+//	}
+//	else if (speed >= (limt + limt * 0.5))
+//	{
+//		printf("Exceed %.0lf%%. License Revoked\n", percentage);
+//	}
+//	else
+//	{
+//		printf("OK\n");
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	char c = 0;
+//	scanf("%d%d %c", &a, &b, &c);
+//	double price = 0.0;
+//	double discount = 0.0;
+//	if (b == 90)
+//	{
+//		price = 6.95;
+//	}
+//	else if (b == 93)
+//	{
+//		price = 7.44;
+//	}
+//	else
+//	{
+//		price = 7.93;
+//	}
+//	if (c == 'm')
+//	{
+//		discount = 0.95;
+//	}
+//	else
+//	{
+//		discount = 0.97;
+//	}
+//	printf("%.2lf", a*price*discount);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int M = 0;
+//	int N = 0;
+//	int tmp = 0;
+//	scanf("%d%d", &M, &N);
+//	int num = M * N;
+//	while (N)
+//	{
+//		tmp = N;
+//		N = M % N;
+//		M = tmp;
+//	}
+//	printf("%d %d\n", M, num / M);
 //	return 0;
 //}
 
@@ -85,160 +103,17 @@
 //int main()
 //{
 //	int num = 0;
+//	int sum = 0;
 //	scanf("%d", &num);
-//	if (num)
+//	while (num > 0)
 //	{
-//		if (num > 0)
+//		if (num % 2)
 //		{
-//			printf("sign(%d) = %d\n", num, 1);
+//			sum += num;
 //		}
-//		else
-//		{
-//			printf("sign(%d) = %d\n", num, -1);
-//		}
+//		scanf("%d", &num);
 //	}
-//	else
-//	{
-//		printf("sign(%d) = %d\n", num, 0);
-//	}
-//	return 0;
-//}
-
-//#include<stdio.h>
-//#include<stdlib.h>
-//
-//int cmp(void* p1, void* p2)
-//{
-//	return *(int*)p1 > *(int*)p2 ? 1 : -1;
-//}
-//
-//int main()
-//{
-//	int arr[3] = { 0 };
-//	int i = 0;
-//	for (i = 0; i < 3; i++)
-//	{
-//		scanf("%d", &arr[i]);
-//	}
-//	qsort(arr, 3, sizeof(arr[0]), cmp);
-//	printf("%d->%d->%d\n", arr[0], arr[1], arr[2]);
-//	return 0;
-//}
-
-//#include<stdio.h>
-//#include<ctype.h>
-//
-//int main()
-//{
-//	int letter = 0;
-//	int blank = 0;
-//	int digit = 0;
-//	int other = 0;
-//	int i = 0;
-//	char tmp = 0;
-//	for (i = 0; i < 10; i++)
-//	{
-//		scanf("%c", &tmp);
-//		if (isalpha(tmp))
-//		{
-//			letter++;
-//			continue;
-//		}
-//		else if (isdigit(tmp))
-//		{
-//			digit++;
-//			continue;
-//		}
-//		else if (tmp == ' ' || tmp == '\n')
-//		{
-//			blank++;
-//			continue;
-//		}
-//		else
-//		{
-//		   other++;
-//		   continue;
-//		}
-//	}
-//	printf("letter = %d, blank = %d, digit = %d, other = %d\n", letter, blank, digit, other);
-//	return 0;
-//}
-
-//#include<stdio.h>
-//
-//void menu()
-//{
-//	printf("[1] apple\n[2] pear\n[3] orange\n[4] grape\n[0] exit\n");
-//}
-//
-//enum KIND
-//{
-//	apple=1,
-//	pear,
-//	orange,
-//	grape
-//};
-//
-//int main()
-//{
-//	menu();
-//	int i = 0;
-//	for (i = 0; i < 5; i++)
-//	{
-//		int input = 0;
-//		scanf("%d", &input);
-//		if (!input)
-//		{
-//			break;
-//		}
-//		switch (input)
-//		{
-//		case apple:
-//			printf("price = 3.00\n");
-//			break;
-//		case pear:
-//			printf("price = 2.50\n");
-//			break;
-//		case orange:
-//			printf("price = 4.10\n");
-//			break;
-//		case grape:
-//			printf("price = 10.20\n");
-//			break;
-//		default:
-//			printf("price = 0.00\n");
-//			break;
-//		}
-//	}
-//	return 0;
-//}
-
-//#include<stdio.h>
-//
-//int main()
-//{
-//	double salary = 0.0;
-//	scanf("%lf", &salary);
-//	if (salary <= 1600)
-//	{
-//		printf("0.00\n");
-//	}
-//	else if (salary > 1600 && salary <= 2500)
-//	{
-//		printf("%.2lf\n", 0.05*(salary-1600));
-//	}
-//	else if (salary > 2500 && salary <= 3500)
-//	{
-//		printf("%.2lf\n", 0.1*(salary - 1600));
-//	}
-//	else if (salary > 3500 && salary <= 4500)
-//	{
-//		printf("%.2lf\n", 0.15*(salary - 1600));
-//	}
-//	else if (salary > 4500)
-//	{
-//		printf("%.2lf\n", 0.2*(salary - 1600));
-//	}
+//	printf("%d\n", sum);
 //	return 0;
 //}
 
@@ -247,39 +122,23 @@
 //int main()
 //{
 //	int n = 0;
-//	int num_A = 0;
-//	int num_B = 0;
-//	int num_C = 0;
-//	int num_D = 0;
-//	int num_E = 0;
+//	int min = 0;
+//	int num = 0;
 //	scanf("%d", &n);
 //	int i = 0;
 //	for (i = 0; i < n; i++)
 //	{
-//		double score = 0;
-//		scanf("%lf ", &score);
-//		if (score >= 90)
+//		scanf("%d", &num);
+//		if (n == 1)
 //		{
-//			num_A++;
+//			min = num;
 //		}
-//		else if (score >= 80 && score < 90)
+//		else if (min > num)
 //		{
-//			num_B++;
-//		}
-//		else if (score >= 70 && score < 80)
-//		{
-//			num_C++;
-//		}
-//		else if (score >= 60 && score < 70)
-//		{
-//			num_D++;
-//		}
-//		else
-//		{
-//			num_E++;
+//			min = num;
 //		}
 //	}
-//	printf("%d %d %d %d %d\n", num_A, num_B, num_C, num_D, num_E);
+//	printf("min = %d\n",min);
 //	return 0;
 //}
 
@@ -287,15 +146,78 @@
 //
 //int main()
 //{
-//	int N = 0;
-//	scanf("%d", &N);
-//	if (N % 5 >= 1 && N%5 <= 3)
+//	int n = 0;
+//	int sum = 0;
+//	int num = 0;
+//	scanf("%d", &num);
+//	if (!num)
 //	{
-//		printf("Fishing in day %d\n", N);
+//		printf("1 0\n");
+//		return 0;
 //	}
-//	else
+//	while (num)
 //	{
-//		printf("Drying in day %d\n", N);
+//		n++;
+//		sum += num % 10;
+//		num /= 10;
 //	}
+//	printf("%d %d\n", n, num);
 //	return 0;
 //}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int num = 0;
+//	for (num = 0;; num++)
+//	{
+//		if ((num % 5 == 1) && (num % 6 == 5) && (num % 7 == 4) && (num % 11) == 10)
+//		{
+//			break;
+//		}
+//	}
+//	printf("%d\n", num);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//int main()
+//{
+//	double mol = 2.0;
+//	double par = 1.0;
+//	double sum = 0.0;
+//	double tmp = 0.0;
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		sum += mol / par;
+//		tmp = mol;
+//		mol += par;
+//		par = tmp;
+//	}
+//	printf("%.2lf\n", sum);
+//	return 0;
+//}
+
+#include<stdio.h>
+
+int main()
+{
+	int a = 0;
+	int n = 0;
+	int sum = 0;
+	scanf("%d%d", &a, &n);
+	int i = 0;
+	int tmp = a;
+	for (i = 0; i < n; i++)
+	{
+		sum += a;
+		a = a * 10 + tmp;
+	}
+	printf("s = %d\n", sum);
+	return 0;
+}
